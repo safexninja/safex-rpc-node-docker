@@ -1,4 +1,4 @@
-# safex-node
+# safex-rpc-node
 Docker: <a href="https://hub.docker.com/r/safexninja/safex-rpc-node">hub.docker.com/r/safexninja/safex-rpc-node</a><br>
 This will run the daemon from <a href="https://github.com/safex/safexcore" target="_blank">Safex Core</a> as an RPC node. No mining. The in/out peers are set to 50.<br>
 To receive <b>in</b>-peers make sure port range 17400-17403 is open on the router/network and if needed portforwarded to the docker-host, or the host is connected to the internet directly. When the node is running type <code>status</code> to see the synchronization status and the amount of peers.<br><br>
