@@ -14,15 +14,15 @@ Be aware: when starting the node for the fist time it will start synchronizing w
 You need to specify your external/public ip adress in the commandline!
 <br>
 <h2>With default data location</h2><br>
-<code>$ docker run -i --net-host -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code>
+<code>$ docker run -i --net=host -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code>
 
 <br><h2>Recommended: With mount local volume (on the host) to /data folder in the container</h2>
-<code>$ docker run -i --net-host -v [volume]:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br><br><br>
+<code>$ docker run -i --net=host -v [volume]:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br><br><br>
 <b>example linux/mac</b><br>
-<code>$ docker run -i --net-host -v <b>/home/.safex</b>:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br>
+<code>$ docker run -i --net=host -v <b>/home/.safex</b>:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br>
 this will persist the blockchain data in <i>/home/.safex</i> on the host<br><br>
 <b>example windows</b><br>
-<code>$ docker run -i --net-host -v <b>/c/data/.safex</b>:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br>
+<code>$ docker run -i --net=host -v <b>/c/data/.safex</b>:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br>
 this will persist the blockchain data in <i>c:/data/.safex</i> on the host<br>
 
 <br>
@@ -40,6 +40,6 @@ If you have not installed docker yet, follow these steps:<br><br>
 <code>$ sudo apt update</code><br>
 <code>$ sudo apt install snapd</code><br>
 <code>$ sudo snap install docker</code><br>
-<code>$ docker run -i --net-host -v <b>/home/.safex</b>:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br>
+<code>$ docker run -i --net=host -v <b>/home/.safex</b>:/data -e RPC_IP=<i>[your external ip address]</i> safexninja/safex-rpc-node</code><br>
 <br>
 If you have docker installed already (i.e. Docker Desktop on Mac), then just run the last command only
